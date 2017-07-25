@@ -1,0 +1,20 @@
+{
+  "name": "anythingnative/joomla-reviews-co-uk-module",
+  "version": "0.1",
+  "require": {
+    "friendsofphp/php-cs-fixer": "^2.4",
+    "joomla/registry": "~1.0",
+    "malukenho/docheader": "^0.1.6",
+    "phpunit/phpunit": "~6.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "AnythingNative\\Reviews\\": "./src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "AnythingNativeTest\\Reviews\\": "./test"
+    }
+  }
+}

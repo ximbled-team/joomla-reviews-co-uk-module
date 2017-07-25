@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.7.0" client="site" method="upgrade">
+    <name>List reviews from reviews.co.uk</name>
+    <author>WebOD LTD</author>
+    <version>1.0.0</version>
+    <description>Joomla! module for inserting reviews.co.uk on your Joomla! site.</description>
+    <files>
+        <folder>tmpl</folder>
+        <folder>src</folder>
+
+        <filename>mod_reviewscouk.xml</filename>
+        <filename module="mod_reviewscouk">mod_reviewscouk.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+    </files>
+    <config>
+
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+                        name="type"
+                        type="list"
+                        label="Select Type">
+                    <option value="BadgeGenerator">Badge</option>
+                    <option value="TrustedBadgeGenerator">Trusted Badge</option>
+                    <option value="DropdownWidgetGenerator">Dropdown Widget</option>
+                    <option value="CarouselWidgetGenerator">Carousel Widget</option>
+                    <option value="CarouselInlineWidgetGenerator">Carousel Inline Widget</option>
+                    <option value="VerticalWidgetGenerator">Vertical Widget</option>
+                </field>
+
+                <field
+                        name="primary_color"
+                        type="text"
+                        label="Primary Color"
+                        default="#12d06c"/>
+
+                <field
+                        name="neutral_color"
+                        type="text"
+                        label="Neutral Color"
+                        default="#f4f4f4"/>
+
+                <field
+                        name="stars_color"
+                        type="text"
+                        label="Stars Color"
+                        default="#ffffff"/>
+
+                <field
+                        name="text_color"
+                        type="text"
+                        label="Text Color"
+                        default="#ffffff"/>
+
+                <field
+                        name="review_text_color"
+                        type="text"
+                        label="Review Text Color"
+                        default="#2f2f2f"/>
+
+                <field
+                        name="review_rating_color"
+                        type="text"
+                        label="Review Rating Color"
+                        default="#2f2f2f"/>
+
+                <field
+                        name="direction"
+                        type="text"
+                        label="Direction"
+                        default="down"/>
+
+                <field
+                        name="height"
+                        type="text"
+                        label="Height"
+                        default="400"/>
+
+                <field
+                        name="layout"
+                        type="text"
+                        label="Layout"
+                        default="fullWidth"/>
+
+                <field
+                        name="num_reviews"
+                        type="text"
+                        label="Numbers Of Reviews"
+                        default="21"/>
+            </fieldset>
+        </fields>
+
+    </config>
+</extension>
