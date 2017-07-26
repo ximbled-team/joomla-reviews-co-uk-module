@@ -41,42 +41,60 @@ final class GeneratorFactory
     private function buildBadgeGenerator(string $storeName, Registry $registry): BadgeGenerator
     {
         return new BadgeGenerator($storeName, [
-            '' => $registry->get('', ''),
+            'primaryClr' => $registry->get('primary_color', '#12d06c'),
+            'neutralClr' => $registry->get('neutral_color', '#f4f4f4'),
+            'starsClr' => $registry->get('stars_color', '#ffffff'),
+            'textClr' => $registry->get('text_color', '#ffffff'),
         ]);
     }
 
     private function buildCarouselInlineGenerator(string $storeName, Registry $registry): CarouselInlineGenerator
     {
         return new CarouselInlineGenerator($storeName, [
-            '' => $registry->get('', ''),
+            'primaryClr' => $registry->get('primary_color', '#f47e27'),
+            'neutralClr' => $registry->get('neutral_color', '#f4f4f4'),
+            'reviewTextClr' => $registry->get('review_text_color', '#2f2f2f'),
+            'ratingTextClr' => $registry->get('review_rating_color', '#2f2f2f'),
+            'layout' => $registry->get('layout', 'fullWidth'),
+            'numReviews' => (int) $registry->get('num_reviews', 21),
         ]);
     }
 
     private function buildCarouselWidgetGenerator(string $storeName, Registry $registry): CarouselWidgetGenerator
     {
         return new CarouselWidgetGenerator($storeName, [
-            '' => $registry->get('', ''),
+            'primaryClr' => $registry->get('primary_color', '#f47e27'),
+            'neutralClr' => $registry->get('neutral_color', '#f4f4f4'),
+            'reviewTextClr' => $registry->get('review_text_color', '#494949'),
+            'layout' => $registry->get('layout', 'fullWidth'),
+            'numReviews' => (int) $registry->get('num_reviews', 21),
         ]);
     }
 
     private function buildDropdownWidgetGenerator(string $storeName, Registry $registry): DropdownWidgetGenerator
     {
         return new DropdownWidgetGenerator($storeName, [
-            '' => $registry->get('', ''),
+            'primaryClr' => $registry->get('primary_color', '#f47e27'),
+            'neutralClr' => $registry->get('neutral_color', '#f4f4f4'),
+            'textClr' => $registry->get('text_color', '#000'),
+            'height' => (int) $registry->get('height', 400),
+            'numReviews' => (int) $registry->get('num_reviews', 10),
+            'direction' => $registry->get('direction', 'down'),
         ]);
     }
 
     private function buildTrustedBadgeGenerator(string $storeName, Registry $registry): TrustedBadgeGenerator
     {
-        return new TrustedBadgeGenerator($storeName, [
-            '' => $registry->get('', ''),
-        ]);
+        return new TrustedBadgeGenerator($storeName, []);
     }
 
     private function buildVerticalWidgetGenerator(string $storeName, Registry $registry): VerticalWidgetGenerator
     {
         return new VerticalWidgetGenerator($storeName, [
-            '' => $registry->get('', ''),
+            'primaryClr' => $registry->get('primary_color', '#f47e27'),
+            'layout' => $registry->get('layout', 'fullWidth'),
+            'height' => (int) $registry->get('height', 500),
+            'numReviews' => (int) $registry->get('num_reviews', 10),
         ]);
     }
 }
