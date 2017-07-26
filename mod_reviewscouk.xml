@@ -5,7 +5,6 @@
     <version>1.0.0</version>
     <description>Joomla! module for inserting reviews.co.uk on your Joomla! site.</description>
     <files>
-        <folder>tmpl</folder>
         <folder>src</folder>
 
         <filename>mod_reviewscouk.xml</filename>
