@@ -44,18 +44,18 @@ final class CarouselWidgetGenerator implements Generator
     /** @var string */
     private $js = 'carouselWidget(\'{id}\', {config});';
 
-    public function __construct(string $storeName, array $options)
+    public function __construct($storeName, array $options)
     {
         $this->storeName = $storeName;
         $this->options = $options;
     }
 
-    public function getStoreName(): string
+    public function getStoreName()
     {
         return $this->storeName;
     }
 
-    public function toString(): string
+    public function toString()
     {
         $id = 'reviews-carousel-' . time();
         $config = $this->options;

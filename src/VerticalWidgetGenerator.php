@@ -43,18 +43,18 @@ final class VerticalWidgetGenerator implements Generator
     /** @var string */
     private $js = 'verticalWidget(\'{id}\', {config});';
 
-    public function __construct(string $storeName, array $options)
+    public function __construct($storeName, array $options)
     {
         $this->storeName = $storeName;
         $this->options = $options;
     }
 
-    public function getStoreName(): string
+    public function getStoreName()
     {
         return $this->storeName;
     }
 
-    public function toString(): string
+    public function toString()
     {
         $id = 'reviews-virt-' . time();
         $config = $this->options;

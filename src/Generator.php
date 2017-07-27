@@ -11,9 +11,9 @@ namespace AnythingNative\Reviews;
 
 interface Generator
 {
-    public function __construct(string $storeName, array $options);
+    public function __construct($storeName, array $options);
 
-    public function getStoreName(): string;
+    public function getStoreName();
 
-    public function toString(): string;
+    public function toString();
 }

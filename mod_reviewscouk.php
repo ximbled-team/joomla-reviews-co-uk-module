@@ -16,7 +16,15 @@ namespace {
     if (file_exists(__DIR__ . '/vendor/autoload.php')) {
         require_once __DIR__ . '/vendor/autoload.php';
     } else {
-        JLoader::registerNamespace('AnythingNative\Reviews', __DIR__ . '/src');
+        require_once __DIR__ . '/src/Generator.php';
+
+        require_once __DIR__ . '/src/BadgeGenerator.php';
+        require_once __DIR__ . '/src/CarouselInlineWidgetGenerator.php';
+        require_once __DIR__ . '/src/CarouselWidgetGenerator.php';
+        require_once __DIR__ . '/src/DropdownWidgetGenerator.php';
+        require_once __DIR__ . '/src/GeneratorFactory.php';
+        require_once __DIR__ . '/src/TrustedBadgeGenerator.php';
+        require_once __DIR__ . '/src/VerticalWidgetGenerator.php';
     }
 
     $factory = new GeneratorFactory();

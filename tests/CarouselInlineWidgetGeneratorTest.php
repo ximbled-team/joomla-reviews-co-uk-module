@@ -9,10 +9,10 @@
 
 namespace AnythingNativeTest\Reviews;
 
-use AnythingNative\Reviews\CarouselInlineGenerator;
+use AnythingNative\Reviews\CarouselInlineWidgetGenerator;
 use PHPUnit\Framework\TestCase;
 
-final class CarouselInlineGeneratorTest extends TestCase
+final class CarouselInlineWidgetGeneratorTest extends TestCase
 {
     private $defaultConfig = [
         'primaryClr' => '#f47e27',
@@ -26,20 +26,20 @@ final class CarouselInlineGeneratorTest extends TestCase
     public function testItCanBeConstructed()
     {
         static::assertInstanceOf(
-            CarouselInlineGenerator::class,
-            new CarouselInlineGenerator('anything-native', $this->defaultConfig)
+            CarouselInlineWidgetGenerator::class,
+            new CarouselInlineWidgetGenerator('anything-native', $this->defaultConfig)
         );
     }
 
     public function testItCanGetStoreName()
     {
-        $SUT = new CarouselInlineGenerator('anything-native', $this->defaultConfig);
+        $SUT = new CarouselInlineWidgetGenerator('anything-native', $this->defaultConfig);
         static::assertEquals('anything-native', $SUT->getStoreName());
     }
 
     public function testOutput()
     {
-        $generator = new CarouselInlineGenerator('anything-native', $this->defaultConfig);
+        $generator = new CarouselInlineWidgetGenerator('anything-native', $this->defaultConfig);
         $string = $generator->toString();
 
         // Test store name is in there.

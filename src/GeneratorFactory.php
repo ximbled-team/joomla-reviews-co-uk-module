@@ -13,7 +13,7 @@ use Joomla\Registry\Registry;
 
 final class GeneratorFactory
 {
-    public function __invoke(Registry $registry): Generator
+    public function __invoke(Registry $registry)
     {
         $type = (string) $registry->get('type', '');
         $storeName = (string) $registry->get('store_name', '');
@@ -36,7 +36,7 @@ final class GeneratorFactory
         return $this->$expectedMethod($storeName, $registry);
     }
 
-    private function buildBadgeGenerator(string $storeName, Registry $registry): BadgeGenerator
+    private function buildBadgeGenerator($storeName, Registry $registry)
     {
         return new BadgeGenerator($storeName, [
             'primaryClr' => $registry->get('primary_color', '#12d06c'),
@@ -46,9 +46,9 @@ final class GeneratorFactory
         ]);
     }
 
-    private function buildCarouselInlineGenerator(string $storeName, Registry $registry): CarouselInlineGenerator
+    private function buildCarouselInlineWidgetGenerator($storeName, Registry $registry)
     {
-        return new CarouselInlineGenerator($storeName, [
+        return new CarouselInlineWidgetGenerator($storeName, [
             'primaryClr' => $registry->get('primary_color', '#f47e27'),
             'neutralClr' => $registry->get('neutral_color', '#f4f4f4'),
             'reviewTextClr' => $registry->get('review_text_color', '#2f2f2f'),
@@ -58,7 +58,7 @@ final class GeneratorFactory
         ]);
     }
 
-    private function buildCarouselWidgetGenerator(string $storeName, Registry $registry): CarouselWidgetGenerator
+    private function buildCarouselWidgetGenerator($storeName, Registry $registry)
     {
         return new CarouselWidgetGenerator($storeName, [
             'primaryClr' => $registry->get('primary_color', '#f47e27'),
@@ -69,7 +69,7 @@ final class GeneratorFactory
         ]);
     }
 
-    private function buildDropdownWidgetGenerator(string $storeName, Registry $registry): DropdownWidgetGenerator
+    private function buildDropdownWidgetGenerator($storeName, Registry $registry)
     {
         return new DropdownWidgetGenerator($storeName, [
             'primaryClr' => $registry->get('primary_color', '#f47e27'),
@@ -81,12 +81,12 @@ final class GeneratorFactory
         ]);
     }
 
-    private function buildTrustedBadgeGenerator(string $storeName, Registry $registry): TrustedBadgeGenerator
+    private function buildTrustedBadgeGenerator($storeName, Registry $registry)
     {
         return new TrustedBadgeGenerator($storeName, []);
     }
 
-    private function buildVerticalWidgetGenerator(string $storeName, Registry $registry): VerticalWidgetGenerator
+    private function buildVerticalWidgetGenerator($storeName, Registry $registry)
     {
         return new VerticalWidgetGenerator($storeName, [
             'primaryClr' => $registry->get('primary_color', '#f47e27'),

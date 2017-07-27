@@ -10,7 +10,7 @@
 namespace AnythingNativeTest\Reviews;
 
 use AnythingNative\Reviews\BadgeGenerator;
-use AnythingNative\Reviews\CarouselInlineGenerator;
+use AnythingNative\Reviews\CarouselInlineWidgetGenerator;
 use AnythingNative\Reviews\CarouselWidgetGenerator;
 use AnythingNative\Reviews\DropdownWidgetGenerator;
 use AnythingNative\Reviews\GeneratorFactory;
@@ -52,13 +52,13 @@ final class GeneratorFactoryTest extends TestCase
         static::assertInstanceOf(BadgeGenerator::class, $factory($params));
     }
 
-    public function testItCanBuildCarouselInlineGenerator()
+    public function testItCanBuildCarouselInlineWidgetGenerator()
     {
         $params = new Registry($this->defaultConfiguration);
-        $params->set('type', 'CarouselInlineGenerator');
+        $params->set('type', 'CarouselInlineWidgetGenerator');
 
         $factory = new GeneratorFactory();
-        static::assertInstanceOf(CarouselInlineGenerator::class, $factory($params));
+        static::assertInstanceOf(CarouselInlineWidgetGenerator::class, $factory($params));
     }
 
     public function testItCanBuildCarouselWidgetGenerator()

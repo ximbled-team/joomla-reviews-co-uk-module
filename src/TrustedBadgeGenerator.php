@@ -17,18 +17,18 @@ final class TrustedBadgeGenerator implements Generator
     /** @var array */
     private $options;
 
-    public function __construct(string $storeName, array $options)
+    public function __construct($storeName, array $options)
     {
         $this->storeName = $storeName;
         $this->options = $options;
     }
 
-    public function getStoreName(): string
+    public function getStoreName()
     {
         return $this->storeName;
     }
 
-    public function toString(): string
+    public function toString()
     {
         return '<a href="https://www.reviews.co.uk/company-reviews/store/' . $this->storeName . '" target="_blank">
                     <img src="https://s3-eu-west-1.amazonaws.com/reviews-global/images/trust-badges/reviews-trust-logo-2.png"/>

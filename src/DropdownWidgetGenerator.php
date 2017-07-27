@@ -45,18 +45,18 @@ final class DropdownWidgetGenerator implements Generator
     /** @var string */
     private $js = 'dropdownWidget(\'{id}\', {config});';
 
-    public function __construct(string $storeName, array $options)
+    public function __construct($storeName, array $options)
     {
         $this->storeName = $storeName;
         $this->options = $options;
     }
 
-    public function getStoreName(): string
+    public function getStoreName()
     {
         return $this->storeName;
     }
 
-    public function toString(): string
+    public function toString()
     {
         $id = 'reviews-dropdown-' . time();
         $config = $this->options;

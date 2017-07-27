@@ -28,7 +28,7 @@ carouselInlineWidget('carousel-inline-widget-360',{
 
 namespace AnythingNative\Reviews;
 
-final class CarouselInlineGenerator implements Generator
+final class CarouselInlineWidgetGenerator implements Generator
 {
     /** @var string */
     private $storeName;
@@ -45,18 +45,18 @@ final class CarouselInlineGenerator implements Generator
     /** @var string */
     private $js = 'carouselInlineWidget(\'{id}\', {config});';
 
-    public function __construct(string $storeName, array $options)
+    public function __construct($storeName, array $options)
     {
         $this->storeName = $storeName;
         $this->options = $options;
     }
 
-    public function getStoreName(): string
+    public function getStoreName()
     {
         return $this->storeName;
     }
 
-    public function toString(): string
+    public function toString()
     {
         $id = 'reviews-carousel-inline-' . time();
         $config = $this->options;
