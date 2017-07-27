@@ -24,8 +24,6 @@ reviewsBadge('badge-140',{
 
 */
 
-declare(strict_types=1);
-
 namespace AnythingNative\Reviews;
 
 final class BadgeGenerator implements Generator

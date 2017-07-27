@@ -25,8 +25,6 @@ carouselWidget('carousel-widget-360',{
 
 */
 
-declare(strict_types=1);
-
 namespace AnythingNative\Reviews;
 
 final class CarouselWidgetGenerator implements Generator

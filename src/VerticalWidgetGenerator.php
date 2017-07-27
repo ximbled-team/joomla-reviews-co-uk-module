@@ -24,8 +24,6 @@ verticalWidget('vertical-widget-360',{
 
 */
 
-declare(strict_types=1);
-
 namespace AnythingNative\Reviews;
 
 final class VerticalWidgetGenerator implements Generator

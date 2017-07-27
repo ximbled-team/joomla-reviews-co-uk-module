@@ -7,8 +7,6 @@
  * file that was distributed with this source code.
  */
 
-declare(strict_types=1);
-
 namespace {
 
     use AnythingNative\Reviews\GeneratorFactory;
@@ -18,7 +16,7 @@ namespace {
     if (file_exists(__DIR__ . '/vendor/autoload.php')) {
         require_once __DIR__ . '/vendor/autoload.php';
     } else {
-        JLoader::registerNamespace('AnythingNative', __DIR__ . '/src');
+        JLoader::registerNamespace('AnythingNative\Reviews', __DIR__ . '/src');
     }
 
     $factory = new GeneratorFactory();

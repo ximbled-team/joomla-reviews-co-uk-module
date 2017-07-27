@@ -28,6 +28,12 @@
                 </field>
 
                 <field
+                        name="store_name"
+                        type="text"
+                        label="Store Name"
+                        default=""/>
+
+                <field
                         name="primary_color"
                         type="text"
                         label="Primary Color"

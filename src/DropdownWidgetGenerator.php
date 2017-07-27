@@ -26,8 +26,6 @@ Expected output.
 
 */
 
-declare(strict_types=1);
-
 namespace AnythingNative\Reviews;
 
 final class DropdownWidgetGenerator implements Generator

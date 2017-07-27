@@ -7,7 +7,7 @@
  * file that was distributed with this source code.
  */
 
-declare(strict_types=1);
+
 
 return PhpCsFixer\Config::create()
     ->setRiskyAllowed(true)
@@ -26,7 +26,7 @@ return PhpCsFixer\Config::create()
         'class_definition' => true,
         'combine_consecutive_unsets' => true,
         'concat_space' => false,
-        'declare_strict_types' => true,
+        'declare_strict_types' => false,
         'elseif' => true,
         'encoding' => true,
         'full_opening_tag' => true,
